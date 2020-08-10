@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+const app = createApp({})
 
-createApp(App).mount('#app')
+app.component('blog-post', {
+  props: ['title'],
+  template: `<h4>{{ title }}</h4>`
+})
+
+app.mount('#blog-post-demo')
